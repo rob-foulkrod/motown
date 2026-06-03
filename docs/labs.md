@@ -3,7 +3,7 @@
 These are the hands-on labs we may work through in class. Each lab is a free,
 self-paced exercise from [GitHub Skills](https://skills.github.com/) and most are
 paired with a matching [Microsoft Learn](https://learn.microsoft.com/training/)
-module. Work through them in order — later labs build on earlier ones.
+module. Work through them in any order.
 
 !!! tip "How the labs work"
     GitHub Skills labs run inside a real repository. When you start a lab, GitHub
