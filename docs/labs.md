@@ -120,9 +120,16 @@ module. Work through them in any order.
     5. Merge your pull request.
 - **Start the lab:** <https://github.com/skills/hello-github-actions>
 
-### Lab 12 You own Contribution
+### Lab 12 — Make your first open source contribution
 
-- **Module:** Open Source
-
-- **Start the lab** <https://github.com/firstcontributions/first-contributions>
-
+- **Module:** Supplemental (First Contributions) — hands-on open source workflow
+- **Audience:** Beginners making their very first contribution to a project
+- **Duration:** Less than 30 minutes
+- **Prerequisites:** Try out Git, Introduction to GitHub (Labs 1 and 2 above)
+- **Scenario:** Fork a beginner-friendly repository, add your name to a list, and
+  open a pull request — practicing the full contribution workflow end to end.
+- **What you'll do:**
+    1. Fork the repository and clone your fork.
+    2. Create a branch and add your name to `Contributors.md`.
+    3. Commit, push, and open a pull request for review.
+- **Start the lab:** <https://github.com/firstcontributions/first-contributions>
