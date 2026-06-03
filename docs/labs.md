@@ -125,30 +125,11 @@ module. Work through them in any order.
 - **Module:** Supplemental (First Contributions) — hands-on open source workflow
 - **Audience:** Beginners making their very first contribution to a project
 - **Duration:** Less than 30 minutes
-- **Prerequisites:** Try out Git, Introduction to GitHub, Reviewing pull requests
-  (Labs 1, 2, and 3 above)
-- **Scenario:** First Contributions simplifies and guides the way beginners make
-  their first contribution. You fork a real repository, add your name to a list,
-  and open a pull request — practicing the full contribution workflow end to end.
+- **Prerequisites:** Try out Git, Introduction to GitHub (Labs 1 and 2 above)
+- **Scenario:** Fork a beginner-friendly repository, add your name to a list, and
+  open a pull request — practicing the full contribution workflow end to end.
 - **What you'll do:**
-    1. **Fork the repository.** Click the **Fork** button at the top of the
-       project page to create a copy in your own account. (If you don't have Git
-       installed yet, [install it](https://docs.github.com/en/get-started/quickstart/set-up-git)
-       first.)
-    2. **Clone your fork.** Open your forked repository, click the **Code** button,
-       copy the URL, then run `git clone "url you just copied"` to download it to
-       your machine.
-    3. **Create a branch.** Change into the repository directory
-       (`cd first-contributions`) and create a branch with
-       `git switch -c your-new-branch-name`.
-    4. **Make and commit your change.** Open `Contributors.md`, add your name
-       somewhere in the middle of the file, and save. Then stage and commit it:
-       `git add Contributors.md` followed by
-       `git commit -m "Add your-name to Contributors list"`.
-    5. **Push your changes.** Send the branch to your fork with
-       `git push -u origin your-branch-name`.
-    6. **Open a pull request.** Back on GitHub, click the **Compare & pull
-       request** button to submit your change for review.
-- **Not comfortable with the command line?** Try the
-  [tutorials using GUI tools](https://github.com/firstcontributions/first-contributions#tutorials-using-other-tools).
+    1. Fork the repository and clone your fork.
+    2. Create a branch and add your name to `Contributors.md`.
+    3. Commit, push, and open a pull request for review.
 - **Start the lab:** <https://github.com/firstcontributions/first-contributions>
