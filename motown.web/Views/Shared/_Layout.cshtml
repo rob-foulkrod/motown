@@ -8,7 +8,7 @@
     <script>
         // Apply the saved or system-preferred color theme before paint to avoid a flash.
         (function () {
-            var stored = localStorage.getItem("theme");
+            var stored = localStorage.getItem("motown-web-theme");
             var theme = stored
                 ? stored
                 : (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
@@ -38,7 +38,7 @@
                         </li>
                     </ul>
                     <button id="theme-toggle" type="button" class="btn btn-outline-secondary btn-sm" aria-label="Toggle dark mode">
-                        <span id="theme-toggle-icon"></span>
+                        <span id="theme-toggle-icon" aria-hidden="true"></span>
                     </button>
                 </div>
             </div>

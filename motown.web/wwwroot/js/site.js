@@ -8,7 +8,7 @@
 (function () {
     "use strict";
 
-    var STORAGE_KEY = "theme";
+    var STORAGE_KEY = "motown-web-theme";
 
     function systemPrefersDark() {
         return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -33,6 +33,11 @@
         if (icon) {
             // Show the icon for the mode the user can switch to.
             icon.textContent = theme === "dark" ? "☀️" : "🌙";
+        }
+        var toggle = document.getElementById("theme-toggle");
+        if (toggle) {
+            toggle.setAttribute("aria-label",
+                theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
         }
     }
 
