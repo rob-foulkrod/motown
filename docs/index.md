@@ -18,6 +18,11 @@ using [MkDocs](https://www.mkdocs.org/) with the
     An overview of the GitHub features we use in class, from pull requests to
     GitHub Pages.
 
+- :material-flask: **[Class Labs](labs.md)**
+
+    Hands-on GitHub Skills labs we work through in class, with links to start
+    each one.
+
 </div>
 
 ## How this site is built
