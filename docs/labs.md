@@ -119,3 +119,10 @@ module. Work through them in any order.
     4. See the workflow run in the Actions tab.
     5. Merge your pull request.
 - **Start the lab:** <https://github.com/skills/hello-github-actions>
+
+### Lab 12 You own Contribution
+
+- **Module:** Open Source
+
+- **Start the lab** <https://github.com/firstcontributions/first-contributions>
+
