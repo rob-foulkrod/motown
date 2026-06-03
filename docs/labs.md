@@ -120,9 +120,35 @@ module. Work through them in any order.
     5. Merge your pull request.
 - **Start the lab:** <https://github.com/skills/hello-github-actions>
 
-### Lab 12 You own Contribution
+### Lab 12 — Make your first open source contribution
 
-- **Module:** Open Source
-
-- **Start the lab** <https://github.com/firstcontributions/first-contributions>
-
+- **Module:** Supplemental (First Contributions) — hands-on open source workflow
+- **Audience:** Beginners making their very first contribution to a project
+- **Duration:** Less than 30 minutes
+- **Prerequisites:** Try out Git, Introduction to GitHub, Reviewing pull requests
+  (Labs 1, 2, and 3 above)
+- **Scenario:** First Contributions simplifies and guides the way beginners make
+  their first contribution. You fork a real repository, add your name to a list,
+  and open a pull request — practicing the full contribution workflow end to end.
+- **What you'll do:**
+    1. **Fork the repository.** Click the **Fork** button at the top of the
+       project page to create a copy in your own account. (If you don't have Git
+       installed yet, [install it](https://docs.github.com/en/get-started/quickstart/set-up-git)
+       first.)
+    2. **Clone your fork.** Open your forked repository, click the **Code** button,
+       copy the URL, then run `git clone "url you just copied"` to download it to
+       your machine.
+    3. **Create a branch.** Change into the repository directory
+       (`cd first-contributions`) and create a branch with
+       `git switch -c your-new-branch-name`.
+    4. **Make and commit your change.** Open `Contributors.md`, add your name
+       somewhere in the middle of the file, and save. Then stage and commit it:
+       `git add Contributors.md` followed by
+       `git commit -m "Add your-name to Contributors list"`.
+    5. **Push your changes.** Send the branch to your fork with
+       `git push -u origin your-branch-name`.
+    6. **Open a pull request.** Back on GitHub, click the **Compare & pull
+       request** button to submit your change for review.
+- **Not comfortable with the command line?** Try the
+  [tutorials using GUI tools](https://github.com/firstcontributions/first-contributions#tutorials-using-other-tools).
+- **Start the lab:** <https://github.com/firstcontributions/first-contributions>
