@@ -1,0 +1,69 @@
+name: 🚀 DarkSpace Contribution
+description: Propose something new for The DarkSpace
+title: "[Motown]: "
+labels: ["enhancement"]
+body:
+
+  - type: markdown
+    attributes:
+    description: See (docs)[https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners] for more details.
+      value: |
+        👋 Welcome, explorer.
+
+        You are about to submit a transmission into **The DarkSpace**.
+        Please describe what you would like to add to this mysterious repository.
+
+        (Yes, recipes are acceptable payloads.)
+
+  - type: dropdown
+    id: contribution-type
+    attributes:
+      label: 🛰️ What type of contribution is this?
+      description: Select the nature of your incoming transmission
+      options:
+        - Documentation
+        - Recipe
+        - Survival Guide
+        - Lore
+        - Checklist
+        - Inspirational Quote
+        - Something That Should Definitely Not Be In Space
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 🌠 Describe your contribution
+      description: Tell us what you're planning to add to The DarkSpace
+      placeholder: Example - A guide for making grilled cheese in zero gravity
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: ⏱️ Urgency Level
+      description: How urgently is this needed?
+      options:
+        - Critical 
+        - High
+        - Medium
+        - Low (For vibes only)
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 🪐 Additional Context
+      description: Anything else the DarkSpace maintainers should know?
+      placeholder: This may or may not involve tacos
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: ✅ Pre-Launch Checklist
+      options:
+        - label: I have verified this content will not anger the void
+        - label: I understand this Issue may be reviewed by the entire class
+        - label: I am prepared to fork responsibly
