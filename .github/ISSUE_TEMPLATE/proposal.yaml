@@ -6,7 +6,7 @@ body:
 
   - type: markdown
     attributes:
-    description: See (docs)[https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners] for more details.
+    description: See https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners for more details.
       value: |
         👋 Welcome, explorer.
 
