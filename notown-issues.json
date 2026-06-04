@@ -1,0 +1,103 @@
+{
+  "$schema": "https://example.com/motown-issues.schema.json",
+  "_comment": "Demo backlog for the rob-foulkrod/motown ASP.NET Core MVC app. Each item creates one GitHub issue. 'labels' must already exist in the repo (see setup script in the step-by-step guide, or pass --label which auto-errors on missing labels). 'projectFields' is OPTIONAL metadata used only by the advanced gh-project automation in the demo; gh issue create ignores it. Suggested 'status' values match the board columns in the demo (Backlog, Ready, In progress, In review, Done).",
+  "repository": "rob-foulkrod/motown",
+  "labels": [
+    { "name": "bug", "color": "d73a4a", "description": "Something isn't working" },
+    { "name": "enhancement", "color": "a2eeef", "description": "New feature or request" },
+    { "name": "documentation", "color": "0075ca", "description": "Docs and READMEs" },
+    { "name": "good first issue", "color": "7057ff", "description": "Good for newcomers" },
+    { "name": "tech-debt", "color": "fbca04", "description": "Refactoring and cleanup" },
+    { "name": "ci-cd", "color": "0e8a16", "description": "Build, test, and deploy pipeline" },
+    { "name": "security", "color": "b60205", "description": "Security-related work" },
+    { "name": "accessibility", "color": "5319e7", "description": "a11y improvements" },
+    { "name": "area:ui", "color": "c5def5", "description": "Views / Razor / front-end" },
+    { "name": "area:data", "color": "bfd4f2", "description": "Models / EF / persistence" }
+  ],
+  "issues": [
+    {
+      "title": "Fix broken album cover image on the artist details page",
+      "body": "## Summary\nOn the Artist Details view the album cover renders as a broken image icon.\n\n## Steps to reproduce\n1. Run the app and open `/Artists/Details/1`.\n2. Observe the album art placeholder.\n\n## Expected\nThe album cover image displays.\n\n## Notes\nLikely a wrong path in `wwwroot/images` or the `img src` in the Razor view. Great first issue for learning the View/wwwroot layout.",
+      "labels": ["bug", "good first issue", "area:ui"],
+      "projectFields": { "status": "Ready", "priority": "P1", "size": "S", "iteration": "Iteration 1" }
+    },
+    {
+      "title": "Add a footer with copyright and GitHub repo link to the shared layout",
+      "body": "## Summary\nAdd a simple footer to `Views/Shared/_Layout.cshtml` showing the copyright year and a link back to the repository.\n\n## Acceptance criteria\n- Footer appears on every page.\n- Year is rendered dynamically.\n- Link points to the motown repo.\n\nGood beginner task to learn shared layouts.",
+      "labels": ["enhancement", "good first issue", "area:ui"],
+      "projectFields": { "status": "Backlog", "priority": "P3", "size": "XS", "iteration": "Iteration 1" }
+    },
+    {
+      "title": "Write a README with project overview, prerequisites, and run instructions",
+      "body": "## Summary\nThe README is currently a stub. Document what the app is, the .NET version required, and how to run it locally (`dotnet run` from `motown.web`).\n\n## Acceptance criteria\n- Overview paragraph.\n- Prerequisites (.NET SDK version).\n- Build & run steps.\n- Screenshot or GIF (optional).",
+      "labels": ["documentation", "good first issue"],
+      "projectFields": { "status": "Backlog", "priority": "P2", "size": "S", "iteration": "Iteration 1" }
+    },
+    {
+      "title": "Create an Artists index page listing all Motown artists",
+      "body": "## Summary\nAdd a controller action and Razor view that lists artists in a responsive card grid.\n\n## Acceptance criteria\n- `ArtistsController.Index` returns a view.\n- View iterates the model and shows name + photo.\n- Empty-state message when no artists exist.",
+      "labels": ["enhancement", "area:ui", "area:data"],
+      "projectFields": { "status": "Ready", "priority": "P1", "size": "M", "iteration": "Iteration 1" }
+    },
+    {
+      "title": "Add search and filter for the Songs catalog",
+      "body": "## Summary\nUsers should be able to search songs by title and filter by artist.\n\n## Acceptance criteria\n- Search box posts a query string.\n- Server-side filtering in the controller.\n- Filter state preserved in the URL.",
+      "labels": ["enhancement", "area:ui", "area:data"],
+      "projectFields": { "status": "Backlog", "priority": "P2", "size": "M", "iteration": "Iteration 2" }
+    },
+    {
+      "title": "Seed the database with sample Motown artists and tracks",
+      "body": "## Summary\nProvide seed data so the app has content on first run.\n\n## Acceptance criteria\n- Seed runs on startup in Development.\n- At least 10 artists and 25 tracks.\n- Idempotent (does not duplicate on restart).",
+      "labels": ["enhancement", "area:data"],
+      "projectFields": { "status": "Backlog", "priority": "P2", "size": "M", "iteration": "Iteration 2" }
+    },
+    {
+      "title": "NullReferenceException when an artist has no albums",
+      "body": "## Summary\nNavigating to an artist with zero albums throws a `NullReferenceException`.\n\n## Steps to reproduce\n1. Create an artist with no albums.\n2. Open their details page.\n\n## Expected\nPage renders with a friendly 'No albums yet' message instead of crashing.",
+      "labels": ["bug", "area:data"],
+      "projectFields": { "status": "Ready", "priority": "P1", "size": "S", "iteration": "Iteration 2" }
+    },
+    {
+      "title": "Make the navigation bar responsive on mobile",
+      "body": "## Summary\nThe top nav overflows on small screens. Collapse it into a hamburger menu.\n\n## Acceptance criteria\n- Nav collapses below 768px.\n- All links reachable via the menu.\n- No horizontal scroll on a 360px viewport.",
+      "labels": ["enhancement", "area:ui", "accessibility"],
+      "projectFields": { "status": "Backlog", "priority": "P3", "size": "S", "iteration": "Iteration 2" }
+    },
+    {
+      "title": "Add unit tests for the Songs controller",
+      "body": "## Summary\nThere is no test coverage. Add a test project and cover the Songs controller actions.\n\n## Acceptance criteria\n- New xUnit test project.\n- Tests for Index and Details (happy path + not-found).\n- `dotnet test` passes.",
+      "labels": ["tech-debt", "ci-cd"],
+      "projectFields": { "status": "Backlog", "priority": "P2", "size": "M", "iteration": "Iteration 3" }
+    },
+    {
+      "title": "Set up a GitHub Actions CI workflow (build + test)",
+      "body": "## Summary\nAdd a CI workflow that restores, builds, and tests on every push and pull request.\n\n## Acceptance criteria\n- Workflow file in `.github/workflows`.\n- Runs on push and pull_request.\n- Status badge added to the README.",
+      "labels": ["ci-cd", "enhancement"],
+      "projectFields": { "status": "Backlog", "priority": "P1", "size": "M", "iteration": "Iteration 3" }
+    },
+    {
+      "title": "Validate and sanitize user input on the Contact form",
+      "body": "## Summary\nThe contact form does not validate input, leaving it open to malformed data and stored XSS.\n\n## Acceptance criteria\n- Server-side model validation with data annotations.\n- HTML output is encoded.\n- Friendly validation messages shown to the user.",
+      "labels": ["security", "bug", "area:ui"],
+      "projectFields": { "status": "Ready", "priority": "P1", "size": "M", "iteration": "Iteration 3" }
+    },
+    {
+      "title": "Add pagination to the Songs catalog",
+      "body": "## Summary\nLong song lists should paginate.\n\n## Acceptance criteria\n- Page size of 20.\n- Previous/Next controls.\n- Works together with search/filter.",
+      "labels": ["enhancement", "area:ui"],
+      "projectFields": { "status": "Backlog", "priority": "P3", "size": "M", "iteration": "Iteration 4" }
+    },
+    {
+      "title": "Improve color contrast to meet WCAG AA",
+      "body": "## Summary\nSeveral text/background combinations fail WCAG AA contrast.\n\n## Acceptance criteria\n- Audit primary pages with a contrast checker.\n- Adjust theme variables to >= 4.5:1 for body text.\n- Document the chosen palette.",
+      "labels": ["accessibility", "area:ui"],
+      "projectFields": { "status": "Backlog", "priority": "P2", "size": "S", "iteration": "Iteration 4" }
+    },
+    {
+      "title": "Refactor data access into a repository layer",
+      "body": "## Summary\nControllers query data directly. Introduce a repository abstraction to decouple data access.\n\n## Acceptance criteria\n- `IArtistRepository` + implementation.\n- Controllers depend on the interface via DI.\n- Existing behavior unchanged (covered by tests).\n\nAdvanced task — good candidate to break into sub-issues.",
+      "labels": ["tech-debt", "area:data"],
+      "projectFields": { "status": "Backlog", "priority": "P2", "size": "L", "iteration": "Iteration 4" }
+    }
+  ]
+}
