@@ -1,12 +1,11 @@
 name: 🚀 DarkSpace Contribution
-description: Propose something new for The DarkSpace
+description: Propose something new for The Motown. See https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners for more details.
 title: "[Motown]: "
 labels: ["enhancement"]
 body:
 
   - type: markdown
     attributes:
-    description: See https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners for more details.
       value: |
         👋 Welcome, explorer.
 
